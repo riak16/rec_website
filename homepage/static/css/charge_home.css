@@ -1,0 +1,21 @@
+.body{
+	color: black;
+}
+.outer{
+	background-image: url("charge_bg.jpg");
+	background-repeat:no-repeat;
+	background-size:cover;
+}	
+div#big-form {
+    background: transparent;
+    /* align-items: center; */
+    /* align-content: center; */
+    font-family: serif;
+    text-align: -webkit-center;
+    color: darksalmon;
+}
+button {
+    color: palevioletred;
+    background: transparent;
+	border: transparent;
+}

@@ -4,12 +4,8 @@ from django.views.generic import TemplateView
 from Crypt.forms import InfoForm
 from .forms import CryptForms
 from homepage.models import Info
+from django.core.mail import send_mail
 import string
-
-# Create your views here.
-#class CryptHome(TemplateView):
-	#def get(self,request,**kwargs):
-		#return render(request,'Crypt/crypt_home.html',context=None)
 
 class CryptHome(TemplateView):
 	template_name='Crypt/crypt_home.html'
@@ -34,12 +30,14 @@ class CryptForm(TemplateView):
 	template_name='Crypt/crypt_form.html'
 
 	def get(self,request):
+		if request.session.get('user') is None:
+			return HttpResponseRedirect('/crypt/')
 		form =  CryptForms()
 		return render(request,self.template_name,{'form':form})
 
 	def post(self,request):
 		if request.session.get('user') is None:
-			return HttpResponseRedirect('/credit/')
+			return HttpResponseRedirect('/crypt/')
 		form=CryptForms(request.POST)
 		if form.is_valid():
 			pk_info=request.session.get('user')
@@ -51,6 +49,7 @@ class CryptForm(TemplateView):
 			ans.name=user.name
 			ans.save()
 			request.session['user']=pk_info
+			send_mail('ISTE NITK Recruitments 2017','Hello ' + user.name + '!\n\nThank You for filling up the recruitment form. We have received your submission. We look forward to meeting you in the interaction.\n\nIf you haven\'t applied then please report back to us.\n\nSee you soon! :)\n\nTeam ISTE-NITK','istenitkchapter@gmail.com',[user.email],fail_silently=False,)
 			return redirect('/success')
 		else:
 			return render(request,self.template_name,{'form':form})

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+	{% load static from staticfiles %}
+	{% include 'homepage/head.html' %}
+	<link = href="{% static 'css/create_home.css' %} " rel= "stylesheet"/>
+</head>
+<body>
+	<div class ="outer">
+		{%include 'homepage/navbar.html' %}
+		<h1 class ="text-center" style="color: white">Create</h1>
+		<div id="big-form" class="well auth-box">
+			<form action="" method="POST" enctype="multipart/form-data">
+				<h1 style="color: white">Personal Information</h1>
+			    {% csrf_token %}
+			    <div class="form-group">
+			    	{{ form.as_p}}
+			    </div>
+			    <button type="submit"> Join us</button>
+			 </form>		
+		</div>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>	
+		{% include 'homepage/footer.html' %}
+		</br>
+		</br>
+	</div>
+</body>
+</html>

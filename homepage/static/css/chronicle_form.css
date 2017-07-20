@@ -1,0 +1,37 @@
+.body{
+	color: black;
+}
+.outer{
+	background-image: url("chronicle_bg.jpg");
+	background-repeat:no-repeat;
+	background-size:cover;
+}	
+div#big-form {
+    background: transparent;
+    /* align-items: center; */
+    /* align-content: center; */
+    font-family: serif;
+    text-align: -webkit-center;
+    color: darksalmon;
+}
+button {
+    color: palevioletred;
+    background: transparent;
+	border: transparent;
+}
+h1{
+    color: blanchedalmond;
+}
+input#id_q1 {
+    background: antiquewhite;
+}
+textarea#id_q2 {
+    background: antiquewhite;
+}
+textarea#id_q3{
+    background: antiquewhite;
+}
+b, strong {
+    font-weight: bold;
+    font-size: large;
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+	{% load static from staticfiles %}
+	{% include 'homepage/head.html' %}
+	<link = href="{% static 'css/civil_form.css' %} " rel= "stylesheet"/>
+</head>
+<body>
+	<div class ="outer">
+		<div id="big-form" class="well auth-box">
+			<form action="" method="POST" enctype="multipart/form-data">
+				<legend><h1> Information</h1></legend>
+			    {% csrf_token %}
+			    <div class="form-group">
+			    	{{ form.as_p}}
+			    </div>
+			    <button type="submit"> <b>Submit</b></button>
+			 </form>
+		</div>
+		{% include 'homepage/footer.html' %}
+	</div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+.body{
+	color: black;
+}
+.outer{
+	background-image: url("credit_bg.jpg");
+	background-repeat:no-repeat;
+	background-size:cover;
+}	
+div#big-form {
+    background: transparent;
+    /* align-items: center; */
+    /* align-content: center; */
+    font-family: serif;
+    text-align: -webkit-center;
+    color: orangered;
+}
+button {
+    color: orangered;
+    background: transparent;
+	border: transparent;
+}

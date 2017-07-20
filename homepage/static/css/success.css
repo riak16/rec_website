@@ -1,0 +1,8 @@
+.body{
+	background-color: white;
+}
+.outer{
+	background-image: url("thankyou.jpg");
+	background-repeat:no-repeat;
+	background-size:cover;
+}

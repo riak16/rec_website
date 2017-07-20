@@ -39,8 +39,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'Crypt.apps.CryptConfig',
-    'credit',
+    'Crypt.apps.CryptConfig',#1
+    'Credit',#2
+    'Chronicle',#3
+    'Create',#4
+    'Charge',#5
+    'Clutch',#6
+    'Civil',#7
     'homepage',
 ]
 
